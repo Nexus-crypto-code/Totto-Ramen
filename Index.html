@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Totto Ramen - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --bg: #000;
+    --text: #fff;
+    --accent: #071013;
+    --gray: #ccc;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+  font-family: 'Kanit', sans-serif;
+  background: url('IMG/totto ramen.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+  a {
+    text-decoration: none;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #EE4B2B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav a {
+    font-weight: 600;
+    color: var(--accent);
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #AAAAAA;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--accent);
+  }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1598137260975-f89f9aeeed2a') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .btn {
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #EE4B2B;
+    }
+
+    section.intro, section.features {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: #111;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 300px;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 2rem;
+      color: var(--gray);
+    }
+
+    @media (max-width: 768px) {
+  nav {
+    background: #fff;
+  }
+
+  nav a {
+    color: var(--accent);
+  }
+
+  nav a:hover {
+    color: #000;
+  }
+}
+
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #000000;
+  background: #ffffff;
+}
+
+.footer-logo img {
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <a href="Index.html">
+      <img src="https://images.squarespace-cdn.com/content/v1/601812300e957f6685ba7026/1612885493280-4MX1IZG5P2RBC8VAK8FK/Totto-Ramen-Logo-horiz-red-hat.png" alt="Totto Ramen Logo">
+    </a>
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav id="nav-links">
+    <a href="Index.html" class="active">Home</a>
+    <a href="Menu.html">Menu</a>
+    <a href="About.html">About</a>
+  </nav>
+</header>
+<div class="overlay"></div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Authentic Japanese Ramen</h1>
+      <p>Born in NYC. Crafted with tradition. Enjoy every slurp.</p>
+      <a href="Menu.html" class="btn">Browse Our Menu</a>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Welcome to Totto Ramen</h2>
+    <p>We bring the warmth of Tokyo ramen culture straight to your bowl with our signature chicken-based broth and hand-picked ingredients.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1601049534163-50967c3c0d9b" alt="Signature Broths">
+      <h3>Signature Broths</h3>
+      <p>Slow-simmered for deep, rich umami flavor.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1604909052545-0581b0a2d19b" alt="Fresh Ingredients">
+      <h3>Fresh Ingredients</h3>
+      <p>Only the best meats, noodles, and veggies.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://images.unsplash.com/photo-1573878747555-c5f8e06b8cc6" alt="Cozy Vibes">
+      <h3>Cozy Vibes</h3>
+      <p>A modern twist on classic ramen shop atmosphere.</p>
+    </div>
+  </section>
+
+  <footer>
+  <div class="footer-logo">
+    <img src="https://images.squarespace-cdn.com/content/v1/601812300e957f6685ba7026/1612885493280-4MX1IZG5P2RBC8VAK8FK/Totto-Ramen-Logo-horiz-red-hat.png" alt="Totto Logo">
+  </div>
+  <p>&copy; 2025 Totto Ramen. All rights reserved.</p>
+</footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
