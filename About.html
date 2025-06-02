@@ -1,13 +1,11 @@
-<!-- About.html (Fixed Layout) -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - Totto Ramen</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
   <style>
-
     * {
   margin: 0;
   padding: 0;
@@ -16,7 +14,7 @@
 
     body {
   font-family: 'Kanit', sans-serif;
-  background: url('IMG/totto ramen.png') no-repeat center center fixed;
+  background: url('totto ramen.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   line-height: 1.6;
@@ -26,7 +24,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.95);
+      background: #EE4B2B;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,16 +40,15 @@
     nav {
       display: flex;
       gap: 2rem;
-      align-items: center;
     }
 
     nav a {
-      color: rgb(255, 0, 0);
+      color: rgb(0, 0, 0);
       font-weight: 600;
     }
 
     nav a:hover {
-      color: #f98e97;
+      color: #AAAAAA;
     }
 
     .menu-toggle {
@@ -106,7 +103,7 @@
       nav {
         display: none;
         flex-direction: column;
-        background: #000;
+        background: #EE4B2B;
         position: absolute;
         width: 100%;
         top: 70px;
@@ -223,6 +220,72 @@ footer {
   background: rgba(0,0,0,0.65);
   z-index: -1;
 }
+
+.insta-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #EE4B2B;
+    width: 100%;
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    display: block;
+  }
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+nav a.active {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+  color: #f4c542;
+}
   </style>
 </head>
 
@@ -242,7 +305,7 @@ footer {
 
   <section class="hero">
   <div class="overlay-text">
-    <h1>Welcome to Totto Ramen</h1>
+    <h1>WE ARE <span style="color:#EE4B2B">TOTTO</span> RAMEN</h1>
     <p>Bringing authentic Japanese ramen with a NYC twist since 2010.</p>
     <p>Made fresh daily with the finest ingredients, our broth is carefully simmered for hours to bring out deep,</p>
          <p>rich flavors. No shortcuts, just time-honored tradition in every bowl.</p>
@@ -264,13 +327,13 @@ footer {
         We are proud of our recipes that are delicious & fun and delight the great people of New York and beyond.</p>
     </div>
     <div class="image-grid">
-  <img src="IMG/TottoRamen1.jpg" alt="Ramen Bowl 1">
-  <img src="IMG/TottoRamen2.jpeg" alt="Ramen Bowl 2">
-  <img src="IMG/TottoRamen3.jpeg" alt="Chef Preparing">
-  <img src="IMG/TottoRamen4.jpeg" alt="Inside Restaurant">
-  <img src="IMG/TottoRamen5.jpeg" alt="Customer Enjoying">
-  <img src="IMG/TottoRamen6.jpeg" alt="Totto Decor">
-</div>
+  <img src="TottoRamen1.jpg" alt="Ramen Bowl 1">
+  <img src="TottoRamen2.jpeg" alt="Ramen Bowl 2">
+  <img src="TottoRamen3.jpeg" alt="Chef Preparing">
+  <img src="TottoRamen4.jpeg" alt="Inside Restaurant">
+  <img src="TottoRamen5.jpeg" alt="Customer Enjoying">
+  <img src="TottoRamen6.jpeg" alt="Totto Decor">
+      </div>
     </div>
   </main>
 
@@ -279,6 +342,11 @@ footer {
     <img src="https://images.squarespace-cdn.com/content/v1/601812300e957f6685ba7026/1612885493280-4MX1IZG5P2RBC8VAK8FK/Totto-Ramen-Logo-horiz-red-hat.png" alt="Totto Logo">
   </div>
   <p>&copy; 2025 Totto Ramen. All rights reserved.</p>
+  <div class="connect-social">
+  <a href="https://www.instagram.com/totto_ramen" target="_blank" class="insta-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="insta-icon">
+  </a>
+</div>
 </footer>
 
   <script>
