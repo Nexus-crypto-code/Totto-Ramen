@@ -21,7 +21,7 @@
 
     body {
       font-family: 'Kanit', sans-serif;
-      background: url('totto ramen.png') no-repeat center center fixed;
+      background: url('IMG/totto ramen.png') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       line-height: 1.6;
@@ -185,7 +185,7 @@
      z-index: -1;
     }
 
-    .external-links {
+    .clickable {
   text-align: center;
   margin: 3rem 0 2rem;
 }
@@ -230,6 +230,82 @@ nav a.active {
   padding-bottom: 2px;
   color: #f4c542;
 }
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 0 10px;
+  filter: invert(100%);
+  transition: transform 0.3s;
+}
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Container for dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #EE4B2B;
+  min-width: 200px;
+  z-index: 1;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+}
+
+.dropdown-content span {
+  color: white;
+  padding: 8px 16px;
+  display: block;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.dropdown-content span:hover {
+  background-color: #1d1d1d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.choose-location-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.choose-location-btn {
+  background-color: #ffffff;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose-location-btn:hover {
+  background-color: #EE4B2B;
+  color:#ffffff;
+}
   </style>
 </head>
 
@@ -237,14 +313,29 @@ nav a.active {
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="https://images.squarespace-cdn.com/content/v1/601812300e957f6685ba7026/1612885493280-4MX1IZG5P2RBC8VAK8FK/Totto-Ramen-Logo-horiz-red-hat.png" alt="Totto Logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/601812300e957f6685ba7026/1612885493280-4MX1IZG5P2RBC8VAK8FK/Totto-Ramen-Logo-horiz-red-hat.png" alt="Totto Ramen Logo">
       </a>
     </div>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <nav id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Menu.html" class="active">Menu</a>
-      <a href="About.html">About</a>
+      <a href="Menu.html" class="active">MENU</a>
+      <a href="About.html">ABOUT</a>
+      <div class="dropdown">
+      <span class="dropbtn">LOCATIONS</span>
+      <div class="dropdown-content">
+        <span>Assembly Row – Somerville</span>
+        <span>South Bay – Boston</span>
+        <span>Zhongxiao – Taipei</span>
+        <span>Zhongshan – Taipei</span>
+        <span>Simon – Taipei</span>
+        <span>Locations</span>
+      </div>
+    </div>
+      <a>FRANCHISE</a>
+      <a>CONTACT</a>
+      <a href="https://www.instagram.com/totto_ramen" target="_blank">
+      <img src="IMG/instagram-icon.png" alt="Instagram" class="social-icon">
+    </a>
     </nav>
   </header>
 
@@ -256,11 +347,15 @@ nav a.active {
       <p>Each of our signature dishes at Totto Ramen is thoughtfully crafted, highlighting the rich flavors of authentic Japanese ramen with our unique culinary twist. From savory broths simmered to perfection, to tender noodles and fresh ingredients, every bowl tells a delicious story.</p>
     </div>
 
+    <div class="choose-location-wrapper">
+  <button class="choose-location-btn">CHOOSE LOCATION</button>
+      </div>
+
     <section class="menu-gallery">
       <div class="menu-items">
 
         <div class="menu-item-box">
-          <img src="Takoyaki.jpg" alt="Takoyaki">
+          <img src="IMG/Takoyaki.jpg" alt="Takoyaki">
           <div class="menu-description">
             <h3>Takoyaki</h3>
             <p>Japanese-style deep fried octopus cakes with our house mayo and kagome sauce, garnished with fish flakes and pickled ginger.</p>
@@ -268,7 +363,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Karaage.png" alt="Karaage Ramen">
+          <img src="IMG/Karaage.png" alt="Karaage Ramen">
           <div class="menu-description">
             <h3>Karaage Ramen</h3>
             <p>House made fried chicken in our savory chicken broth w/ wavy noodles topped w/ scallion, onion.</p>
@@ -276,7 +371,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Gyoza.jpg" alt="Gyoza">
+          <img src="IMG/Gyoza.jpg" alt="Gyoza">
           <div class="menu-description">
             <h3>Gyoza</h3>
             <p>Served with house dipping sauce.</p>
@@ -284,7 +379,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="SpicyRamen.png" alt="Spicy Ramen">
+          <img src="IMG/SpicyRamen.png" alt="Spicy Ramen">
           <div class="menu-description">
             <h3>Spicy Ramen (Best Seller)</h3>
             <p>Rayu, our original spicy sesame oil with slabs of char-siu layered atop wavy noodles with scallion, bean sprouts.</p>
@@ -292,7 +387,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Chicken+Bun.jpg" alt="Chicken Bun">
+          <img src="IMG/Chicken+Bun.jpg" alt="Chicken Bun">
           <div class="menu-description">
             <h3>Chicken Bun</h3>
             <p>Spicy fried chicken patty, lettuce, w/ yuzu mayo.</p>
@@ -300,7 +395,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Paitan+Ramen.png" alt="Paitan Ramen">
+          <img src="IMG/Paitan+Ramen.png" alt="Paitan Ramen">
           <div class="menu-description">
             <h3>Paitan Ramen (Best Seller)</h3>
             <p>Loaded w/ char siu in our savory broth w/ wavy noodles topped with scallion, shredded pork, onion.</p>
@@ -308,7 +403,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Pork+Bun.jpg" alt="Pork Bun">
+          <img src="IMG/Pork+Bun.jpg" alt="Pork Bun">
           <div class="menu-description">
             <h3>Pork Bun</h3>
             <p>Tender char siu pork, lettuce, w/ yuzu mayo.</p>
@@ -316,7 +411,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Vegetable+Ramen.png" alt="Veggie Ramen">
+          <img src="IMG/Vegetable+Ramen.png" alt="Veggie Ramen">
           <div class="menu-description">
             <h3>Veggie Ramen</h3>
             <p>Konbu seaweed and shiitake mushroom based broth topped w/ seasonal veggies, bell peppers, seasoned avocado and yuzu paste.</p>
@@ -324,7 +419,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Fried+Chicken.jpg" alt="Fried Chicken">
+          <img src="IMG/Fried+Chicken.jpg" alt="Fried Chicken">
           <div class="menu-description">
             <h3>Fried Chicken</h3>
             <p>Spicy marinated fried chicken tenders served over a bed of lettuce topped with yuzu mayo.</p>
@@ -332,7 +427,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Miso+Paitan.png" alt="Miso Ramen">
+          <img src="IMG/Miso+Paitan.png" alt="Miso Ramen">
           <div class="menu-description">
             <h3>Misu Ramen</h3>
             <p>scoop of house made miso paste served with wavy noodles, char-siu, half a seasoned soft boiled egg, scallion, bean sprouts, & onion.</p>
@@ -340,7 +435,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Tuna+Don.jpg" alt="Tuna Don">
+          <img src="IMG/Tuna+Don.jpg" alt="Tuna Don">
           <div class="menu-description">
             <h3>Tuna Don</h3>
             <p>Chopped tuna combined with spicy mayo over steamed rice, topped with refreshing cucumber, masago, lettuce and scallion.</p>
@@ -348,7 +443,7 @@ nav a.active {
         </div>
 
         <div class="menu-item-box">
-          <img src="Shrimp+Ramen.png" alt="Shrimp Ramen">
+          <img src="IMG/Shrimp+Ramen.png" alt="Shrimp Ramen">
           <div class="menu-description">
             <h3>Shrimp Ramen</h3>
             <p>Housemade Shrimp paste in our broth w/ wavy noodles, half soft boiled egg, scallion, bean sprouts, onion, & shrimp. *contains peanuts and cashews*.</p>
@@ -359,7 +454,7 @@ nav a.active {
   </main>
 
   <footer>
-     <div class="external-links">
+     <div class="clickable">
   <a href="https://www.ubereats.com/store/totto-ramen463-artisan-way/CcmZc9wAQ-udAgdUGxOTjQ?diningMode=PICKUP&mod=merchantUnavailable&modctx=%257B%2522storeUuid%2522%253A%252209c99973-dc00-43eb-9d02-07541b13938d%2522%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE2JTIwTWluZXIlMjBTdCUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjRmZGIxYmQ4LWY3YWYtNjM3YS0xOWUxLWQ3YWIyMmE1ZmMzMCUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDIuMzQ2NTgyJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTcxLjEwMjgyOCU3RA%3D%3D&ps=1" target="_blank" class="btn-link">ORDER NOW SOMERVILLE</a>
   <a href="https://www.ubereats.com/store/totto-ramen-south-boston/nF4U7gNaRQq_5JCinoVeOw?diningMode=PICKUP&mod=merchantUnavailable&modctx=%257B%2522storeUuid%2522%253A%25229c5e14ee-035a-450a-bfe4-90a29e855e3b%2522%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE2JTIwTWluZXIlMjBTdCUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjRmZGIxYmQ4LWY3YWYtNjM3YS0xOWUxLWQ3YWIyMmE1ZmMzMCUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDIuMzQ2NTgyJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTcxLjEwMjgyOCU3RA%3D%3D&ps=1&sc=SEARCH_SUGGESTION" target="_blank" class="btn-link">ORDER NOW BOSTON</a>
 </div>
