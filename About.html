@@ -14,7 +14,7 @@
 
     body {
   font-family: 'Kanit', sans-serif;
-  background: url('totto ramen.png') no-repeat center center fixed;
+  background: url('IMG/totto ramen.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   line-height: 1.6;
@@ -286,21 +286,112 @@ nav a.active {
   padding-bottom: 2px;
   color: #f4c542;
 }
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 0 10px;
+  filter: invert(100%);
+  transition: transform 0.3s;
+}
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #EE4B2B;
+  min-width: 200px;
+  z-index: 1;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+}
+
+.dropdown-content span {
+  color: white;
+  padding: 8px 16px;
+  display: block;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.dropdown-content span:hover {
+  background-color: #1d1d1d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.connect-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+
+.connect-section .insta-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.connect-section .insta-handle {
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
   </style>
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/601812300e957f6685ba7026/1612885493280-4MX1IZG5P2RBC8VAK8FK/Totto-Ramen-Logo-horiz-red-hat.png" alt="Totto Ramen"></a>
+      <a href="index.html">
+        <img src="https://images.squarespace-cdn.com/content/v1/601812300e957f6685ba7026/1612885493280-4MX1IZG5P2RBC8VAK8FK/Totto-Ramen-Logo-horiz-red-hat.png" alt="Totto Ramen Logo">
+      </a>
     </div>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <nav id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Menu.html">Menu</a>
-      <a href="About.html" class="active">About</a>
+      <a href="Menu.html">MENU</a>
+      <a href="About.html" class="active">ABOUT</a>
+      <div class="dropdown">
+      <span class="dropbtn">LOCATIONS</span>
+      <div class="dropdown-content">
+        <span>Assembly Row – Somerville</span>
+        <span>South Bay – Boston</span>
+        <span>Zhongxiao – Taipei</span>
+        <span>Zhongshan – Taipei</span>
+        <span>Simon – Taipei</span>
+        <span>Locations</span>
+      </div>
+    </div>
+      <a>FRANCHISE</a>
+      <a>CONTACT</a>
+      <a href="https://www.instagram.com/totto_ramen" target="_blank">
+      <img src="IMG/instagram-icon.png" alt="Instagram" class="social-icon">
+    </a>
     </nav>
   </header>
+
   <div class="overlay"></div>
 
   <section class="hero">
@@ -314,26 +405,32 @@ nav a.active {
 
   <main>
     <div class="about-section">
-    <h1>Our Story</h1>
+    <h1>MEET TOTTO RAMEN</h1>
     <div class="about-text">
-      <p>Totto Ramen started in 2010 in the heart of New York City, blending authentic Japanese flavors with a NYC twist.</p>
-      <p>Our chicken-based ramen is a warm bowl of soul, boiled for 18 hours and topped with perfection.</p>
-      <p>We now have locations across NYC, Boston, and even Taipei, each serving our signature dishes with pride.</p>
-      <p>Totto Ramen was born out of our love for sustainability, flavor & tradition. 
-        After a decade of developing fine dining experiences through our sister restaurant,
-         Yakitori Totto, it became clear to us that New York City was ready for a Chicken Based Ramen
-         - as opposed to Tonkotsu or Pork-Based Ramen.</p> 
-        <p>Our collaboration with Japanese Chefs over the years has allowed us to introduce our signature Chicken Paitan ramen for all to enjoy.
-        We are proud of our recipes that are delicious & fun and delight the great people of New York and beyond.</p>
+      <p>Totto Ramen was born out of our love for sustainability, flavor & tradition. After a decade of developing fine dining experiences through our sister restaurant, Yakitori Totto,
+         it became clear to us that New York City was ready for a Chicken Based Ramen - as opposed to Tonkotsu or Pork-Based Ramen.</p>
+      <p>Our collaboration with Japanese Chefs over the years has allowed us to introduce our signature Chicken Paitan ramen for all to enjoy.
+         We are proud of our recipes that are delicious & fun and delight the great people of New York and beyond.</p>
     </div>
-    <div class="image-grid">
-  <img src="TottoRamen1.jpg" alt="Ramen Bowl 1">
-  <img src="TottoRamen2.jpeg" alt="Ramen Bowl 2">
-  <img src="TottoRamen3.jpeg" alt="Chef Preparing">
-  <img src="TottoRamen4.jpeg" alt="Inside Restaurant">
-  <img src="TottoRamen5.jpeg" alt="Customer Enjoying">
-  <img src="TottoRamen6.jpeg" alt="Totto Decor">
-      </div>
+
+      <div class="connect-section">
+    <h2 style="color: #EE4B2B;">CONNECT WITH US</h2>
+    <p>
+      <a href="https://www.instagram.com/totto_ramen" target="_blank" style="text-decoration: none; color: inherit;">
+        <img src="IMG/Instagram-icon.png" alt="Instagram" class="insta-icon">
+        <span class="insta-handle">TOTTO_RAMEN</span>
+      </a>
+    </p>
+  </div>
+
+<div class="image-grid">
+  <img src="IMG/TottoRamen1.jpg" alt="Ramen Bowl 1">
+  <img src="IMG/TottoRamen2.jpeg" alt="Ramen Bowl 2">
+  <img src="IMG/TottoRamen3.jpeg" alt="Chef Preparing">
+  <img src="IMG/TottoRamen4.jpeg" alt="Inside Restaurant">
+  <img src="IMG/TottoRamen5.jpeg" alt="Customer Enjoying">
+  <img src="IMG/TottoRamen6.jpeg" alt="Totto Decor">
+</div>
     </div>
   </main>
 
